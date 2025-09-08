@@ -16,4 +16,4 @@ app.get("/contact", contactRoutes);
 
 app.listen(PORT, () => {
     console.log(`chạy tại cổng ${PORT}`);
-});
+}); //tao la cha may

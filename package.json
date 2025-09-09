@@ -13,6 +13,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "bootstrap": "^5.3.8",
+    "ejs": "^3.1.10",
     "express": "^5.1.0",
     "module-alias": "^2.2.3"
   },
@@ -20,8 +22,7 @@
     "nodemon": "^3.1.10"
   },
   "_moduleAliases": {
-      "@routes": "./routes",
-      "@controllers": "./controllers"
+    "@routes": "./routes",
+    "@controllers": "./controllers"
   }
-} 
-
+}

@@ -1,1 +1,4 @@
-dự án phát triển web cá nhân, vui lòng học cách sử dụng github trước khi phát triển 🤡
+dự án phát triển web cá nhân sử dụng Nodejs, framework Express.
+
+Founder: Anh Thịnh, Gia Huy
+Ngày bắt đầu: 8/9/2025

@@ -85,29 +85,72 @@ footer .copyright {
   font-size: 14px;
   color: #adb5bd;
 }
-footer {
-  background: #0d1b2a;
-  color: #e0e1dd;
-  text-align: center;
-  padding: 20px 10px;
+html, body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column; /* xếp dọc header - main - footer */
 }
+
 main {
-  padding-bottom: 60px; /* cao hơn chiều cao footer */
+  flex: 1; /* chiếm toàn bộ không gian còn lại để đẩy footer xuống */
 }
 
 footer {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  background: #2c406d;
-  color: #e2e5e4;
+  background-color: #0d1b2a;
+  color: white;
   text-align: center;
-  padding: 20px 10px;
+  padding: 20px;
 }
+
+
 .footerlogo {
   width: 120px;
   margin-bottom: 0 10px;
   float: left;
+}
+.poject{
+    text-align: center;
+    margin-top: 50px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #060f24;
+}
+
+
+    main {
+  min-height: 5000px; /* ép trang dài ít nhất 2000px */
+}
+.rectangle-row {
+  display: flex;               
+  justify-content: space-around; /* khoảng cách đều xung quanh */
+  padding: 20px;
+  flex-wrap: wrap;             
+  gap: 1px;                    /* khoảng cách giữa các hình */
+}
+
+.rectangle {
+  flex: 0 0 400px;              /* cố định chiều rộng 150px */
+  height: 500px;
+  background-color: #219ebc;
+  border: 2px solid #023047;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.3s, background-color 0.3s;
+}
+
+.rectangle:hover {
+  background-color: #ffb703;
+  transform: scale(1.05);
+}
+.rectangle img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* ảnh đầy khung, không méo */
+  display: block;
 }
 

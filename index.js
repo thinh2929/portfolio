@@ -21,7 +21,7 @@ app.use(express.static("public")); //định nghĩa thư mục tĩnh
 //định nghĩa các tuyến đường
 app.get("/", homeRoutes);
 app.get("/contact", contactRoutes);
-app.get("/khogamixi", khogaRoutes);
+app.get("/khoga", khogaRoutes);
 
 app.listen(PORT, () => {
     console.log(`chạy tại cổng ${PORT}`);

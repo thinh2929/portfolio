@@ -1,3 +1,10 @@
+/* biến màu */
+:root {
+  --blue-color: #0d55ff; /* màu xanh dương đậm*/
+  --cyan-color: #00c9db; /* màu xanh dương nhạt*/
+  --gray-color: #333333; /* màu xám đậm*/
+}
+
 /* CSS cho NavBar */
 .nav {
     background-color: #333;
@@ -36,10 +43,33 @@
         padding: 0 10px;
         margin: 0;
         font-size: large;
+        transition: 0.5s;
+        a {
+          color: white;
+        }
+        &:not(.updating):hover {
+            background-color: #ddd;
+            a {
+              color: var(--gray-color);
+            }
+        }
+    }
+
+    .updating {
+      color: rgb(52, 52, 52);
+      background-color: rgb(74, 74, 74);
+      &:hover {
+        cursor: not-allowed;
+        background-color: rgb(38, 38, 38);
+        color: rgba(255, 255, 255, 0.2);
+      }
+      a {
+        cursor: not-allowed;
+      }
     }
 }
 
-
+/* CSS cho Footer */
 footer .footer-container {
   max-width: 1200px;
   margin: auto;
@@ -77,13 +107,15 @@ footer ul li a {
 }
 
 footer ul li a:hover {
-  color: #fca311;
+  color: var(--gray-color);
+  
 }
 
 footer .copyright {
   margin-top: 15px;
   font-size: 14px;
-  color: #adb5bd;
+  color: #4a4a4a;
+  /* text-shadow: ; */
 }
 html, body {
   height: 100%;
@@ -97,6 +129,12 @@ main {
 }
 
 footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: linear-gradient(300deg, var(--blue-color), var(--cyan-color), var(--gray-color));
+  color: #e2e5e4;
   background-color: #0d1b2a;
   color: white;
   text-align: center;
@@ -108,49 +146,5 @@ footer {
   width: 120px;
   margin-bottom: 0 10px;
   float: left;
-}
-.poject{
-    text-align: center;
-    margin-top: 50px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #060f24;
-}
-
-
-    main {
-  min-height: 5000px; /* ép trang dài ít nhất 2000px */
-}
-.rectangle-row {
-  display: flex;               
-  justify-content: space-around; /* khoảng cách đều xung quanh */
-  padding: 20px;
-  flex-wrap: wrap;             
-  gap: 1px;                    /* khoảng cách giữa các hình */
-}
-
-.rectangle {
-  flex: 0 0 400px;              /* cố định chiều rộng 150px */
-  height: 500px;
-  background-color: #219ebc;
-  border: 2px solid #023047;
-  border-radius: 8px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  font-weight: bold;
-  cursor: pointer;
-  transition: transform 0.3s, background-color 0.3s;
-}
-
-.rectangle:hover {
-  background-color: #ffb703;
-  transform: scale(1.05);
-}
-.rectangle img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* ảnh đầy khung, không méo */
-  display: block;
 }
 

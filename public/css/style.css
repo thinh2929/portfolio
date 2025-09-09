@@ -19,6 +19,18 @@
     -webkit-box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     -moz-box-shadow: 0 4px 8px 0 rgba(0 0,0,0.2);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    a {
+        float: left;
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        &:hover {
+            background-color: #ddd;
+            color: black;
+        }
+    }
     .logo {
         width: 50px;
         margin: 0 30px;
@@ -105,29 +117,82 @@ footer .copyright {
   color: #4a4a4a;
   /* text-shadow: ; */
 }
-footer {
-  background: #0d1b2a;
-  color: #e0e1dd;
-  text-align: center;
-  padding: 20px 10px;
+html, body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column; /* xếp dọc header - main - footer */
 }
+
 main {
-  padding-bottom: 60px; /* cao hơn chiều cao footer */
+  flex: 1; /* chiếm toàn bộ không gian còn lại để đẩy footer xuống */
 }
 
 footer {
-  position: fixed;
+
   bottom: 0;
   left: 0;
   width: 100%;
   background: linear-gradient(300deg, var(--blue-color), var(--cyan-color), var(--gray-color));
   color: #e2e5e4;
+  background-color: #0d1b2a;
+  color: white;
   text-align: center;
-  padding: 20px 10px;
+  padding: 20px;
 }
+
+
 .footerlogo {
   width: 120px;
   margin-bottom: 0 10px;
   float: left;
 }
+.rectangle-row {
+  display: flex;               
+  justify-content: space-around; 
+  padding: 20px;
+  flex-wrap: wrap;             
+  gap: 20px;      
+                
+}
+
+.rectangle {
+  flex: 0 0 300px;   /* chiều rộng */
+  height: 400px;     /* chiều cao */
+  border: 2px solid #023047;
+  border-radius: 8px;
+  overflow: hidden;   /* giữ ảnh không tràn */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.3s, border-color 0.3s;
+   flex-direction: column;
+}
+
+.rectangle img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* ảnh đầy khung, không méo */
+  display: block;
+}
+
+.rectangle:hover {
+  transform: scale(1.05);
+  border-color: #ffb703;
+}
+main {
+  min-height: 5000px; /* ép trang dài ít nhất 2000px */
+}
+@media screen and (max-width: 800px) {
+  .rectangle {
+    flex: 0 1 45%;   /* 2 hình/1 hàng */
+  }
+}
+
+/* Responsive: màn hình nhỏ hơn 500px */
+@media screen and (max-width: 500px) {
+  .rectangle {
+    flex: 0 1 90%;   /* 1 hình/1 hàng */
+  }}
 

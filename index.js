@@ -4,6 +4,7 @@ import 'module-alias/register.js';
 import homeRoutes from "./routes/homeRoutes.js";
 import contactRoutes from "./routes/contactRoutes.js";
 import khogaRoutes from "./routes/khogaRoutes.js";
+import projectRoutes from "./routes/projectRoutes.js";
 import { fileURLToPath } from 'url';
 
 const app = express();
@@ -20,6 +21,7 @@ app.use(express.static("public")); //định nghĩa thư mục tĩnh
 
 //định nghĩa các tuyến đường
 app.get("/", homeRoutes);
+app.get("/project", projectRoutes);
 app.get("/contact", contactRoutes);
 app.get("/khogamixi", khogaRoutes);
 

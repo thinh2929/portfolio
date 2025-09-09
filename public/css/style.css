@@ -19,18 +19,6 @@
     -webkit-box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     -moz-box-shadow: 0 4px 8px 0 rgba(0 0,0,0.2);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    a {
-        float: left;
-        display: block;
-        color: white;
-        text-align: center;
-        padding: 14px 16px;
-        text-decoration: none;
-        &:hover {
-            background-color: #ddd;
-            color: black;
-        }
-    }
     .logo {
         width: 50px;
         margin: 0 30px;
@@ -117,15 +105,14 @@ footer .copyright {
   color: #4a4a4a;
   /* text-shadow: ; */
 }
-html, body {
-  height: 100%;
-  margin: 0;
-  display: flex;
-  flex-direction: column; /* xếp dọc header - main - footer */
+footer {
+  background: #0d1b2a;
+  color: #e0e1dd;
+  text-align: center;
+  padding: 20px 10px;
 }
-
 main {
-  flex: 1; /* chiếm toàn bộ không gian còn lại để đẩy footer xuống */
+  padding-bottom: 60px; /* cao hơn chiều cao footer */
 }
 
 footer {
@@ -135,13 +122,9 @@ footer {
   width: 100%;
   background: linear-gradient(300deg, var(--blue-color), var(--cyan-color), var(--gray-color));
   color: #e2e5e4;
-  background-color: #0d1b2a;
-  color: white;
   text-align: center;
-  padding: 20px;
+  padding: 20px 10px;
 }
-
-
 .footerlogo {
   width: 120px;
   margin-bottom: 0 10px;

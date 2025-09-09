@@ -27,7 +27,6 @@
         padding: 14px 16px;
         text-decoration: none;
         &:hover {
-            background-color: #ddd;
             color: black;
         }
     }

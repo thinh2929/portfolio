@@ -38,3 +38,76 @@
         font-size: large;
     }
 }
+
+
+footer .footer-container {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+footer .col {
+  flex: 1 1 250px;
+}
+
+footer h3 {
+  margin-bottom: 10px;
+  font-size: 18px;
+  border-bottom: 2px solid #778da9;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+footer ul {
+  list-style: none;
+  padding: 0;
+}
+
+footer ul li {
+  margin: 6px 0;
+}
+
+footer ul li a {
+  color: #e0e1dd;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+footer ul li a:hover {
+  color: #fca311;
+}
+
+footer .copyright {
+  margin-top: 15px;
+  font-size: 14px;
+  color: #adb5bd;
+}
+footer {
+  background: #0d1b2a;
+  color: #e0e1dd;
+  text-align: center;
+  padding: 20px 10px;
+}
+main {
+  padding-bottom: 60px; /* cao hơn chiều cao footer */
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #2c406d;
+  color: #e2e5e4;
+  text-align: center;
+  padding: 20px 10px;
+}
+.footerlogo {
+  width: 120px;
+  margin-bottom: 0 10px;
+  float: left;
+}
+

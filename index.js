@@ -23,7 +23,7 @@ app.use(express.static("public")); //định nghĩa thư mục tĩnh
 app.get("/", homeRoutes);
 app.get("/project", projectRoutes);
 app.get("/contact", contactRoutes);
-app.get("/khogamixi", khogaRoutes);
+app.get("/khoga", khogaRoutes);
 
 app.listen(PORT, () => {
     console.log(`chạy tại cổng ${PORT}`);

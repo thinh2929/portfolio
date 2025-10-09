@@ -226,3 +226,23 @@ main {
     flex: 0 1 90%;   /* 1 hình/1 hàng */
   }}
 
+.member-info {
+  position: fixed;
+  height: 70%;
+  top: 80px;
+  right: 5px;
+  z-index: 1000;
+  background-color: rgba(0, 0, 0, 0.9);
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid white;
+  border-radius: 5px;
+  box-sizing: border-box;
+  padding: 20px;
+}
+
+.m-infor-avatar {
+  width: 200px;
+}

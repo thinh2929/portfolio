@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="/css/style.css"> <!--Đường dẫn tới file CSS-->
+        <title>Đăng nhập</title>
+        <link rel="icon" href="webdev.svg" type="image/x-icon">
+    </head>
+    <body>
+        <%- include('partials/navbar') %>
+
+        <div class="login-page">
+            <form class="login-form">
+                <input
+                    type="text"
+                    class="username-input"
+                    required
+                    autoComplete="username"
+                    name="username"
+                >
+                <input
+                    type="password"
+                    class="password-input"
+                    required
+                    autocomplete="current-password"
+                    name="password"
+                >
+                <button class="login-btn" type="submit">Đăng nhập</button>
+            </form>
+        </div>
+
+        <%- include('partials/footer') %>
+
+        <script type="module">
+            const loginForm = document.querySelector(".login-form")
+            const navAccount = document.querySelector(".nav-account")           
+            const navUser = document.querySelector(".nav-user")
+            const navUserAvatar = document.querySelector(".nav-user-avatar")
+            const navUserDisname = document.querySelector(".nav-user-disname")       
+
+            loginForm.addEventListener("submit", async (e) => {
+                e.preventDefault()
+
+                const formData = new FormData(loginForm);
+                const data = Object.fromEntries(formData.entries());
+                
+                try {
+                    const res = await fetch("https://nathinh-blog.onrender.com/login", {
+                        method: "POST",
+                        headers: { "Content-Type": "application/json" },
+                        body: JSON.stringify({ username: data.username, password: data.password })
+                    })
+
+                    if (res.ok) {
+                        const resData = await res.json()
+                        alert(resData.message)
+                        localStorage.setItem('accessToken', resData.token)
+                        console.log(resData);
+                        const user = resData.user
+                        navAccount.style.display = "none"
+                        navUser.style.display = "flex"
+                        navUserDisname.innerHTML = user.displayName
+                        navUserAvatar.src = user.avatar
+                    }
+                } catch {
+                    const resData = await res.json()
+                    console.log(resData);
+                    
+                }
+            })
+        </script>
+    </body>
+</html>

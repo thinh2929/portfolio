@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/css/style.css"> <!--Đường dẫn tới file CSS-->
+    <link rel="icon" href="webdev.svg" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng ký</title>
+</head>
+<body>
+    <%- include("partials/navbar")  %>
+    <div class="register-page">
+
+        <form class="register-form">
+            <input
+                type="text"
+                class="regis-username-in"
+                required
+                placeholder="username"
+                name="username"
+                >
+            <input
+                type="password"
+                class="regis-pass-in"
+                required
+                placeholder="password"
+                name="password"
+                >
+            <input
+                type="text"
+                class="regis-disname-in"
+                required
+                placeholder="tên hiển thị"
+                name="displayName"
+            >
+            <button type="submit" class="regis-submit-btn">Đăng ký</button>
+        </form>
+
+    </div>
+    <%- include("partials/footer")  %>
+
+    <script type="module">
+        const regisForm = document.querySelector(".register-form")
+
+        regisForm.addEventListener('submit', async (e) => {
+            e.preventDefault()
+
+            const formData = new FormData(regisForm)
+            const data = Object.fromEntries(formData.entries())
+
+            try {
+                const res = await fetch("https://nathinh-blog.onrender.com/register", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({ username: data.username, password: data.password, displayName: data.displayName })  
+                })
+                
+                if(res.ok) {
+                    const resData = await res.json()
+                    alert("Đăng ký thành công!")
+                } else {
+                    alert(`Đăng ký thất bại: ${resData.message}`)
+                }
+            } catch(err) {
+                alert("Không thể kết nối tới Server")
+            }
+        })
+
+    </script>
+</body>
+</html>

@@ -6,6 +6,7 @@ import contactRoutes from "./routes/contactRoutes.js";
 import khogaRoutes from "./routes/khogaRoutes.js";
 import projectRoutes from "./routes/projectRoutes.js";
 import loginRoutes from "./routes/loginRoutes.js";
+import registerRoutes from "./routes/registerRoutes.js"
 import { fileURLToPath } from 'url';
 
 const app = express();
@@ -27,6 +28,7 @@ app.get("/project", projectRoutes);
 app.get("/contact", contactRoutes);
 app.get("/khoga", khogaRoutes);
 app.get("/login", loginRoutes);
+app.get("/register", registerRoutes);
 
 app.listen(PORT, () => {
     console.log(`chạy tại cổng ${PORT}`);

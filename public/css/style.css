@@ -3,11 +3,13 @@
   --blue-color: #0d55ff; /* màu xanh dương đậm*/
   --cyan-color: #00c9db; /* màu xanh dương nhạt*/
   --gray-color: #333333; /* màu xám đậm*/
+  
 }
 
 body {
   padding: 0;
   margin: 0;
+  
 }
 
 /* CSS cho NavBar */
@@ -300,9 +302,75 @@ main {
 /* CSS trang login */
 .login-page {
   height: 80%;
+    background: linear-gradient(135deg, #d6dae3, #475c89);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.login-j{
+   width: 400px;               
+background: linear-gradient(135deg, #a6bfe8, #5fc0ea);
+color: #fff;       
+  padding: 20px;             
+  border-radius: 10px;         
+box-shadow:
+  0 15px 45px #a6bfe8,
+  0 5px 15px #5fc0ea;  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+    font-family: Arial, sans-serif;
+}
+.login-j button{
+    width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 6px;}
+  .login-j input{
+    width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 6px;
 }
 
 /* CSS trang register */
 .register-page {
-  height: 80%;
+  height: 200%;
+  background: linear-gradient(135deg, #d6dae3, #475c89);
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+.register-all{
+   width: 400px;               
+background: linear-gradient(135deg, #a6bfe8, #5fc0ea);
+color: #fff;       
+  padding: 20px;             
+  border-radius: 10px;         
+box-shadow:
+  0 15px 45px #a6bfe8,
+  0 5px 15px #5fc0ea;  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+    font-family: Arial, sans-serif;
+}
+.register-all button{
+    width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+.register-all input{
+    width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 6px;
 }

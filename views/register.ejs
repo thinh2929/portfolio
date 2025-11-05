@@ -11,7 +11,9 @@
     <%- include("partials/navbar")  %>
     <div class="register-page">
 
-        <form class="register-form">
+    <form class="register-form">
+    <div class="register-all">
+        <div class="register-1">
             <input
                 type="text"
                 class="regis-username-in"
@@ -19,21 +21,25 @@
                 placeholder="username"
                 name="username"
                 >
+                </div>
+         <div class="register-2">
             <input
                 type="password"
                 class="regis-pass-in"
                 required
                 placeholder="password"
                 name="password"
-                >
+                ></div>
+         <div class="register-3">
             <input
                 type="text"
                 class="regis-disname-in"
                 required
                 placeholder="tên hiển thị"
                 name="displayName"
-            >
+            ></div>
             <button type="submit" class="regis-submit-btn">Đăng ký</button>
+            </div>
         </form>
 
     </div>
